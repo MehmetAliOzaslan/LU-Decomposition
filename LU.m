@@ -40,12 +40,9 @@ for j = 1:m-1
     end
 end
 
-for j = m:-1:1
-    for i = j-1:-1:1
-        InvMatrixL = L(:,(m+1):end);
-    end 
-end
-fprintf('%s \n', '             INVERSE L MATRIX');disp(InvMatrixL)
+InvMatrixL = L(:,(m+1):end);
+
+fprintf('%s \n', '             INVERSE OF L MATRIX');disp(InvMatrixL)
 disp('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
 D = zeros(m,1);
 
@@ -64,12 +61,9 @@ for j = m:-1:1
     U(m,m:end) = U(m,m:end) / U(m,m);
 end
 
-for j = m:-1:1
-    for i = j-1:-1:1
-        InvMatrixU = U(:,(m+1):end);
-    end 
-end
-fprintf('%s \n', '             INVERSE U MATRIX');disp(InvMatrixU)
+InvMatrixU = U(:,(m+1):end);
+
+fprintf('%s \n', '             INVERSE OF U MATRIX');disp(InvMatrixU)
 disp('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
 Roots = zeros(m,1);
 for i = 1:m
